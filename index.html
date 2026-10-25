@@ -160,6 +160,7 @@
     <figure><img src="screenshots/08-automations.png" alt="Scheduled agent tasks"><figcaption>Automations — scheduled runs</figcaption></figure>
     <figure><img src="screenshots/14-device-access.png" alt="Device access screen"><figcaption>Device access — and what it read</figcaption></figure>
     <figure><img src="screenshots/17-icloud-sync.png" alt="iCloud sync screen"><figcaption>iCloud sync — on demand</figcaption></figure>
+    <figure><img src="screenshots/18-write-access.png" alt="Device access with write buttons"><figcaption>Calendar, reminders and health — read and write</figcaption></figure>
   </div>
 </div>
 
@@ -255,6 +256,11 @@
           Secrets stay in the Keychain; mail and vault are opt-in.</p>
       </div>
       <div class="card">
+        <h3>Writes, not just reads</h3>
+        <p>Add an event, add a reminder, log a mindfulness session or a glass of water — and
+          see the confirmation. Steps and heart rate stay read-only because HealthKit says so.</p>
+      </div>
+      <div class="card">
         <h3>Two palettes, one app</h3>
         <p>Gruvbox dark and light, following the system appearance automatically — or pinned
           Light/Dark in Settings.</p>
@@ -332,6 +338,14 @@
     </details>
 
     <details>
+      <summary>Can it add things to my calendar and reminders?</summary>
+      <p>Yes. With access granted, Hallo can create a calendar event (title, times, notes,
+        location, calendar of your choice), move or rename it, and delete it; and it can add a
+        reminder with a due date and alarm, mark it complete, or remove it. Health is written
+        for mindfulness minutes and water only — steps, heart rate and sleep are read-only.</p>
+    </details>
+
+    <details>
       <summary>Where is my data stored?</summary>
       <p>On the device, in <code>Documents/Hallo</code>: mail, chats, notes, tasks, vault,
         research, usage, and one markdown file per memory page. API keys and mail passwords are
@@ -362,6 +376,12 @@
       <h2 class="section__title">What changed</h2>
     </header>
     <ol class="timeline">
+      <li>
+        <span class="tag">0.1.0 · build 13</span>
+        <p><strong>Two-way calendar, reminders and health.</strong> Hallo can add, move and
+          delete events, add reminders with due dates and tick them off, and log mindful
+          minutes and water — each write re-checks access and reports what it saved.</p>
+      </li>
       <li>
         <span class="tag">0.1.0 · build 12</span>
         <p><strong>Under the hood.</strong> A clean build: no compiler warnings in Debug or
