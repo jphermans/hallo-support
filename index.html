@@ -158,6 +158,7 @@
     <figure><img src="screenshots/03-chat.png" alt="Chat with thinking and tool calls"><figcaption>Chat — thinking and tools</figcaption></figure>
     <figure><img src="screenshots/05-models.png" alt="Model roles and providers"><figcaption>Models — bring your own key</figcaption></figure>
     <figure><img src="screenshots/08-automations.png" alt="Scheduled agent tasks"><figcaption>Automations — scheduled runs</figcaption></figure>
+    <figure><img src="screenshots/14-device-access.png" alt="Device access screen"><figcaption>Device access — and what it read</figcaption></figure>
   </div>
 </div>
 
@@ -233,6 +234,11 @@
           DynamicUI renderer for boarding passes, seat maps, timers and checklists.</p>
       </div>
       <div class="card">
+        <h3>Works with your device</h3>
+        <p>Calendar, Reminders, Health, Location, Contacts, Motion, Camera, Photos, Microphone,
+          Speech and Face ID — asked for in one screen, each reporting what it could read.</p>
+      </div>
+      <div class="card">
         <h3>Two palettes, one app</h3>
         <p>Gruvbox dark and light, following the system appearance automatically — or pinned
           Light/Dark in Settings.</p>
@@ -277,6 +283,13 @@
     </details>
 
     <details>
+      <summary>Why does it ask for Health, Calendar or Location?</summary>
+      <p>Settings → <em>Device access</em> lists every service with the reason it is used and,
+        once allowed, what it read — for example "2 events in 7 days" or "4,120 steps today".
+        Anything you decline simply stays off; no screen depends on it.</p>
+    </details>
+
+    <details>
       <summary>Where is my data stored?</summary>
       <p>On the device, in <code>Documents/Hallo</code>: mail, chats, notes, tasks, vault,
         research, usage, and one markdown file per memory page. API keys and mail passwords are
@@ -307,6 +320,13 @@
       <h2 class="section__title">What changed</h2>
     </header>
     <ol class="timeline">
+      <li>
+        <span class="tag">0.1.0 · build 9</span>
+        <p><strong>Device access.</strong> Calendar, Reminders, Health, Location, Contacts,
+          Motion, Camera, Photos, Microphone, Speech and Face ID can now be granted in one
+          place — and each one shows what it actually read (event count, steps today, your
+          city), so a permission is never a switch that does nothing.</p>
+      </li>
       <li>
         <span class="tag">0.1.0 · build 8</span>
         <p><strong>Mail that actually syncs.</strong> Adding an account connects over IMAP and
