@@ -239,6 +239,16 @@
           Speech and Face ID — asked for in one screen, each reporting what it could read.</p>
       </div>
       <div class="card">
+        <h3>Your own skills</h3>
+        <p>Claude Code skills import unchanged: a folder with <code>SKILL.md</code> keeps its
+          name, description and allowed-tools, and its references come along.</p>
+      </div>
+      <div class="card">
+        <h3>Remote MCP tools</h3>
+        <p>Point the app at an MCP server over Streamable HTTP, connect once, and its tools
+          become callable from the app — bearer tokens stay in the Keychain.</p>
+      </div>
+      <div class="card">
         <h3>Two palettes, one app</h3>
         <p>Gruvbox dark and light, following the system appearance automatically — or pinned
           Light/Dark in Settings.</p>
@@ -290,6 +300,23 @@
     </details>
 
     <details>
+      <summary>Do my Claude Code skills work here?</summary>
+      <p>Yes. A skill is a folder containing <code>SKILL.md</code> with frontmatter
+        (<code>name</code>, <code>description</code>, <code>allowed-tools</code>) and the
+        instructions as the body — the same layout as <code>~/.claude/skills</code>. Import a
+        single skill folder, a folder of skill folders, or a loose <code>.md</code> file from
+        the Skills screen, or drop them into <code>Documents/Hallo/imports</code> and relaunch.</p>
+    </details>
+
+    <details>
+      <summary>How do I add a remote MCP server?</summary>
+      <p>Automations → Skills &amp; MCP → MCP Servers → Add. Enter the server URL (https, or a
+        local network address) and an optional bearer token, then tap Connect: the app runs
+        <code>initialize</code>, <code>notifications/initialized</code> and
+        <code>tools/list</code>, and each tool appears as a chip you can run.</p>
+    </details>
+
+    <details>
       <summary>Where is my data stored?</summary>
       <p>On the device, in <code>Documents/Hallo</code>: mail, chats, notes, tasks, vault,
         research, usage, and one markdown file per memory page. API keys and mail passwords are
@@ -320,6 +347,13 @@
       <h2 class="section__title">What changed</h2>
     </header>
     <ol class="timeline">
+      <li>
+        <span class="tag">0.1.0 · build 10</span>
+        <p><strong>Skills and remote MCP.</strong> Import Claude Code skills unchanged — a
+          folder with SKILL.md (name, description, allowed-tools) — from Files or by dropping
+          them into the workspace. Remote MCP servers connect for real: the app runs the
+          handshake, lists their tools and can call them.</p>
+      </li>
       <li>
         <span class="tag">0.1.0 · build 9</span>
         <p><strong>Device access.</strong> Calendar, Reminders, Health, Location, Contacts,
