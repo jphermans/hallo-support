@@ -159,6 +159,7 @@
     <figure><img src="screenshots/05-models.png" alt="Model roles and providers"><figcaption>Models — bring your own key</figcaption></figure>
     <figure><img src="screenshots/08-automations.png" alt="Scheduled agent tasks"><figcaption>Automations — scheduled runs</figcaption></figure>
     <figure><img src="screenshots/14-device-access.png" alt="Device access screen"><figcaption>Device access — and what it read</figcaption></figure>
+    <figure><img src="screenshots/17-icloud-sync.png" alt="iCloud sync screen"><figcaption>iCloud sync — on demand</figcaption></figure>
   </div>
 </div>
 
@@ -249,6 +250,11 @@
           become callable from the app — bearer tokens stay in the Keychain.</p>
       </div>
       <div class="card">
+        <h3>Carries between devices</h3>
+        <p>Turn on iCloud sync and your notes, memories, skills and automations follow you.
+          Secrets stay in the Keychain; mail and vault are opt-in.</p>
+      </div>
+      <div class="card">
         <h3>Two palettes, one app</h3>
         <p>Gruvbox dark and light, following the system appearance automatically — or pinned
           Light/Dark in Settings.</p>
@@ -317,6 +323,15 @@
     </details>
 
     <details>
+      <summary>Does it sync between my devices?</summary>
+      <p>Yes, once you turn on Settings → <em>iCloud sync</em>. The app mirrors its workspace
+        into iCloud Drive and merges changes whenever it launches or returns to the foreground.
+        API keys and mail passwords never sync; message bodies and vault items only if you
+        switch on "Also sync mail and vault". If the same file changed on two devices, the
+        newer copy wins and the other is kept beside it as <code>name.conflict-timestamp</code>.</p>
+    </details>
+
+    <details>
       <summary>Where is my data stored?</summary>
       <p>On the device, in <code>Documents/Hallo</code>: mail, chats, notes, tasks, vault,
         research, usage, and one markdown file per memory page. API keys and mail passwords are
@@ -347,6 +362,13 @@
       <h2 class="section__title">What changed</h2>
     </header>
     <ol class="timeline">
+      <li>
+        <span class="tag">0.1.0 · build 11</span>
+        <p><strong>iCloud sync.</strong> Memories, notes, tasks, skills, automations and chats
+          mirror into iCloud Drive and come back on your other devices. Keys never sync, mail
+          and vault are opt-in, and when a file changed on two devices the newer copy wins
+          with the other kept beside it.</p>
+      </li>
       <li>
         <span class="tag">0.1.0 · build 10</span>
         <p><strong>Skills and remote MCP.</strong> Import Claude Code skills unchanged — a
