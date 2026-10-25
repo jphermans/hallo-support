@@ -371,6 +371,14 @@
     </details>
 
     <details>
+      <summary>The app sometimes ignored my taps — what was wrong?</summary>
+      <p>Nothing was wrong with the buttons: every one of them opens or changes something. The
+        iCloud mirror used to read and hash every file on the main thread, so while a sync ran the
+        interface could not process taps at all — on a large workspace that was seconds at a time.
+        That work now runs in the background, so taps are handled while a sync is in progress.</p>
+    </details>
+
+    <details>
       <summary>Can it summarise and reply to my email?</summary>
       <p>Yes. Open a message and tap <em>Discuss with Hallo</em>: the assistant receives the full
         email, so it can summarise it, list the action items, spot dates and draft a reply. Press
@@ -417,6 +425,13 @@
       <h2 class="section__title">What changed</h2>
     </header>
     <ol class="timeline">
+      <li>
+        <span class="tag">0.1.0 · build 15</span>
+        <p><strong>Buttons answer straight away again.</strong> The iCloud mirror was hashing every
+          file on the main thread, so a sync froze the interface and taps were lost while it ran —
+          the work now happens in the background. The brand ring also stops animating in the
+          background and under Reduce Motion, instead of redrawing forever.</p>
+      </li>
       <li>
         <span class="tag">0.1.0 · build 14</span>
         <p><strong>Everything from the tracker.</strong> The assistant now reads the mail you open
