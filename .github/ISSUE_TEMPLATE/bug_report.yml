@@ -1,0 +1,81 @@
+name: Bug report
+description: Something is broken or behaves unexpectedly in Hallo.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The fastest reports name what you did, what you expected,
+        and what actually happened — screenshots help a lot.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe the problem in your own words.
+      placeholder: I added my Gmail account and the inbox stayed empty, with the error "sign-in failed".
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps, starting from opening the app.
+      placeholder: |
+        1. Open Mail
+        2. Tap +
+        3. Choose Gmail, enter address and app password
+        4. Tap "Connect & load mail"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      placeholder: The newest 20 messages appear in the inbox.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version and build
+      description: Settings → About shows this, e.g. "0.1.0 (8)".
+      placeholder: 0.1.0 (8)
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and iOS version
+      description: Settings → General → About on your device.
+      placeholder: iPhone 16 Pro, iOS 27.1
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the app?
+      options:
+        - Home
+        - Chat
+        - Mail
+        - Tasks / automations
+        - Notes
+        - Search
+        - Models / providers / API keys
+        - Messages
+        - Vault
+        - Memory
+        - Research
+        - Widgets
+        - Settings / appearance
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or screen recording
+      description: Drag images in here. Please avoid including real message contents or keys.
+    validations:
+      required: false

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support page and FAQ
+    url: https://jphermans.github.io/hallo-support/
+    about: Setup questions, mail/app-password guidance, known limitations and the changelog.
+  - name: Email support
+    url: mailto:support@jphsystems.io
+    about: Prefer email? Include your device, iOS version, app version and what you were doing.

@@ -1,0 +1,60 @@
+name: Improvement request
+description: Suggest a feature, a flow that should be simpler, or wording that reads wrong.
+title: "[Idea] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem you hit rather than a prescribed implementation — it leaves room
+        for a better solution than either of us thought of first.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The task or goal, and where the app gets in the way.
+      placeholder: I want to triage a week of mail, but the inbox only shows the newest 20 messages.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+      description: Your suggested behaviour. Rough is fine.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Other apps or workarounds, if any.
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the app?
+      options:
+        - Home
+        - Chat
+        - Mail
+        - Tasks / automations
+        - Notes
+        - Search
+        - Models / providers / API keys
+        - Messages
+        - Vault
+        - Memory
+        - Research
+        - Widgets
+        - Settings / appearance
+        - Whole app
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: I understand Hallo is a study reconstruction, not the official Halo app.
+          required: true
