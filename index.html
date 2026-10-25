@@ -161,6 +161,10 @@
     <figure><img src="screenshots/14-device-access.png" alt="Device access screen"><figcaption>Device access — and what it read</figcaption></figure>
     <figure><img src="screenshots/17-icloud-sync.png" alt="iCloud sync screen"><figcaption>iCloud sync — on demand</figcaption></figure>
     <figure><img src="screenshots/18-write-access.png" alt="Device access with write buttons"><figcaption>Calendar, reminders and health — read and write</figcaption></figure>
+    <figure><img src="screenshots/19-mail-chat.png" alt="Chat opened from an email"><figcaption>Discussing a mail — summary, action items, draft reply</figcaption></figure>
+    <figure><img src="screenshots/22-first-run-storage.png" alt="First run storage choice"><figcaption>First run — where should your work live?</figcaption></figure>
+    <figure><img src="screenshots/20-auto-route.png" alt="Auto-route screen"><figcaption>Auto-route — a model per kind of turn</figcaption></figure>
+    <figure><img src="screenshots/21-about.png" alt="About screen"><figcaption>About — JPHsystems, made in Belgium</figcaption></figure>
   </div>
 </div>
 
@@ -261,6 +265,27 @@
           see the confirmation. Steps and heart rate stay read-only because HealthKit says so.</p>
       </div>
       <div class="card">
+        <h3>Mail it can actually read</h3>
+        <p>"Discuss with Hallo" hands over the whole message — sender, date, subject, attachments and
+          body — so summaries, action items and drafted replies are about your mail, not a guess.
+          Sending goes through your provider over SMTP, with a confirmation first.</p>
+      </div>
+      <div class="card">
+        <h3>Models that pick themselves</h3>
+        <p>Auto-route sends short questions to your quick model, plans and stack traces to the one
+          you trust with them, and images to a model that can see. Each choice shows its reason.</p>
+      </div>
+      <div class="card">
+        <h3>DeepSeek, out of the box</h3>
+        <p>Add a DeepSeek key and its models appear ready to pick — <code>deepseek-flash</code> for
+          text and images, <code>deepseek-v4-pro</code> for the heavier work.</p>
+      </div>
+      <div class="card">
+        <h3>Your folder, chosen on day one</h3>
+        <p>The first screen asks where your notes, memories and chats should live: iCloud Drive,
+          a folder you pick in Files, or only on this iPhone.</p>
+      </div>
+      <div class="card">
         <h3>Two palettes, one app</h3>
         <p>Gruvbox dark and light, following the system appearance automatically — or pinned
           Light/Dark in Settings.</p>
@@ -346,6 +371,22 @@
     </details>
 
     <details>
+      <summary>Can it summarise and reply to my email?</summary>
+      <p>Yes. Open a message and tap <em>Discuss with Hallo</em>: the assistant receives the full
+        email, so it can summarise it, list the action items, spot dates and draft a reply. Press
+        Reply to edit the draft and send it — Hallo asks before anything leaves the device and shows
+        you the server's answer if it is refused.</p>
+    </details>
+
+    <details>
+      <summary>What is auto-route?</summary>
+      <p>An optional switch that chooses the model per turn: quick questions to a fast model,
+        reasoning and plans to a stronger one, code to a coding model, images to one that can see,
+        long prompts to a large-context model, mail to whichever you prefer. Each class is a preset
+        you choose; unrouted classes keep the model you picked yourself.</p>
+    </details>
+
+    <details>
       <summary>Where is my data stored?</summary>
       <p>On the device, in <code>Documents/Hallo</code>: mail, chats, notes, tasks, vault,
         research, usage, and one markdown file per memory page. API keys and mail passwords are
@@ -376,6 +417,13 @@
       <h2 class="section__title">What changed</h2>
     </header>
     <ol class="timeline">
+      <li>
+        <span class="tag">0.1.0 · build 14</span>
+        <p><strong>Everything from the tracker.</strong> The assistant now reads the mail you open
+          (and can send a reply through your own SMTP account), models route themselves by task,
+          DeepSeek is a first-class provider, there is a proper About screen with the Belgian flag,
+          and the first run asks where your files should live.</p>
+      </li>
       <li>
         <span class="tag">0.1.0 · build 13</span>
         <p><strong>Two-way calendar, reminders and health.</strong> Hallo can add, move and
